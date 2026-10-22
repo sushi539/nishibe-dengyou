@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西部電業｜電気設備工事・新築マンション工事</title>
+<meta name="description" content="愛知県を中心に電気設備工事、新築マンション工事、現場管理を行う西部電業のホームページです。">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:#173452;background:#fff;line-height:1.8}
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
+.container{width:min(1180px,90%);margin:auto}
+header{position:fixed;top:0;left:0;width:100%;height:72px;background:rgba(255,255,255,.96);z-index:1000;box-shadow:0 1px 12px rgba(0,0,0,.08)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:21px;letter-spacing:.08em;display:flex;align-items:center;gap:10px}
+.logo-mark{font-size:30px;font-weight:900;transform:skew(-15deg)}
+.logo small{display:block;font-size:7px;letter-spacing:.22em;font-weight:600}
+nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700}
+nav a:hover{opacity:.55}
+.nav-contact{background:#0c456d;color:#fff;padding:11px 20px}
+.hero{height:760px;min-height:650px;background:linear-gradient(90deg,rgba(8,25,42,.82),rgba(8,25,42,.25)),url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=85") center/cover;display:flex;align-items:center;color:#fff}
+.hero-inner{padding-top:70px}
+.eyebrow{font-size:12px;letter-spacing:.28em;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(38px,5vw,70px);line-height:1.25;letter-spacing:.08em;margin-bottom:24px}
+.hero p{font-size:15px;max-width:580px;margin-bottom:32px}
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:45px;padding:14px 20px;border:1px solid currentColor;font-size:13px;font-weight:700;min-width:190px}
+.btn-white{background:#fff;color:#173452;border-color:#fff}
+.btn-blue{background:#0c456d;color:#fff;border-color:#0c456d}
+section{padding:100px 0}
+.section-label{font-size:11px;letter-spacing:.28em;font-weight:800;margin-bottom:7px}
+.section-title{font-size:34px;letter-spacing:.06em;margin-bottom:20px}
+.about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;align-items:center}
+.about-img{height:350px;object-fit:cover}
+.about-text p{font-size:14px;margin-bottom:25px}
+.service{background:#f1f5f7}
+.service-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;margin-bottom:45px}
+.service-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff}
+.card img{height:190px;object-fit:cover}
+.card-body{padding:20px}
+.card-num{font-size:22px;font-weight:900;display:block;margin-bottom:4px}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{font-size:12px;color:#536273}
+.works{background:#111c24;color:#fff}
+.works-grid{display:grid;grid-template-columns:1fr 2fr;gap:55px;align-items:center}
+.works-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.work img{height:190px;object-fit:cover}
+.work p{font-size:12px;padding-top:10px}
+.recruit{padding:0;background:#eef4f7}
+.recruit-grid{display:grid;grid-template-columns:1fr 1fr;min-height:420px}
+.recruit-img{background:url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=85") center/cover}
+.recruit-text{padding:80px 8%;display:flex;flex-direction:column;justify-content:center}
+.recruit-text h2{font-size:35px;margin-bottom:15px}
+.news-company{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.list{border-top:1px solid #d9e0e5}
+.list-row{display:grid;grid-template-columns:100px 1fr;gap:20px;padding:12px 0;border-bottom:1px solid #d9e0e5;font-size:12px}
+.company-table{border-top:1px solid #d9e0e5}
+.company-row{display:grid;grid-template-columns:130px 1fr;padding:11px 0;border-bottom:1px solid #d9e0e5;font-size:12px}
+.contact{padding:80px 0;background:linear-gradient(90deg,rgba(7,35,56,.9),rgba(7,35,56,.65)),url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1800&q=85") center/cover;color:#fff}
+.contact-grid{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.contact-buttons{display:flex;gap:15px}
+.contact-box{background:#fff;color:#173452;padding:20px 35px;min-width:250px}
+.contact-box small{font-size:10px;display:block}
+.contact-box strong{font-size:18px}
+footer{background:#0d151b;color:#fff;padding:45px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.footer-nav{display:flex;gap:20px;font-size:11px}
+.copyright{font-size:9px;color:#9ba6ad}
+.mobile-menu{display:none}
+@media(max-width:800px){
+header{height:62px}.nav{height:62px}nav{display:none}.mobile-menu{display:block;font-size:12px}
+.hero{height:700px}.hero h1{font-size:42px}.hero p{font-size:13px}
+section{padding:70px 0}.about-grid,.service-head,.works-grid,.recruit-grid,.news-company{grid-template-columns:1fr;gap:35px}
+.service-cards,.works-cards{grid-template-columns:1fr}
+.about-img{height:260px}.card img,.work img{height:220px}
+.recruit-img{min-height:280px}.recruit-text{padding:60px 7%}
+.contact-grid,.contact-buttons,.footer-inner{flex-direction:column;align-items:flex-start}
+.contact-buttons{width:100%}.contact-box{width:100%}.footer-nav{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home"><span class="logo-mark">⚡</span><span>株式会社西部電業<small>NISHIBE DENGYO</small></span></a>
+    <nav>
+      <a href="#home">ホーム</a>
+      <a href="#about">会社について</a>
+      <a href="#service">事業内容</a>
+      <a href="#works">施工実績</a>
+      <a href="#recruit">採用情報</a>
+      <a href="#company">会社概要</a>
+      <a class="nav-contact" href="#contact">お問い合わせ →</a>
+    </nav>
+    <span class="mobile-menu">MENU</span>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="eyebrow">ELECTRICAL CONSTRUCTION</div>
+    <h1>地域の暮らしを、<br>電気で支える。</h1>
+    <p>西部電業は、愛知県を中心に新築マンションや建物の電気設備工事を行う、電気工事のプロフェッショナルです。</p>
+    <a class="btn btn-white" href="#service">事業内容を見る　→</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-text">
+      <div class="section-label">ABOUT</div>
+      <h2 class="section-title">西部電業について</h2>
+      <p>私たちは、電気設備工事を通して、人々の暮らしや社会のインフラを支える仕事をしています。確かな技術と誠実な対応で、これからも地域に必要とされる企業を目指します。</p>
+      <a class="btn" href="#company">詳しく見る　→</a>
+    </div>
+    <img class="about-img" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1400&q=85" alt="街の風景">
+  </div>
+</section>
+
+<section class="service" id="service">
+  <div class="container">
+    <div class="service-head">
+      <div>
+        <div class="section-label">SERVICE</div>
+        <h2 class="section-title">事業内容</h2>
+      </div>
+      <p>私たちの仕事は、建物に電気を通し、人々の生活を豊かにすることです。</p>
+    </div>
+    <div class="service-cards">
+      <article class="card"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=85" alt="電気設備工事"><div class="card-body"><span class="card-num">01</span><h3>電気設備工事</h3><p>建物の電気設備に関わる幅広い工事を行います。</p></div></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=85" alt="新築マンション"><div class="card-body"><span class="card-num">02</span><h3>新築マンション工事</h3><p>新築マンションを中心に、電気工事を行います。</p></div></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=85" alt="現場管理"><div class="card-body"><span class="card-num">03</span><h3>現場管理</h3><p>受注・品質・工程を管理し、スムーズな現場運営を行います。</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="works" id="works">
+  <div class="container works-grid">
+    <div>
+      <div class="section-label">WORKS</div>
+      <h2 class="section-title">施工実績</h2>
+      <p style="font-size:13px;margin-bottom:25px">マンションや共同施設など、さまざまな建物で電気設備工事を行っています。年間1棟～2棟施工
+        しています。
+      </p>
+      <a class="btn" href="#contact">詳しく見る　→</a>
+    </div>
+   
+  </div>
+</section>
+
+<section class="recruit" id="recruit">
+  <div class="recruit-grid">
+    <div class="recruit-img"></div>
+    <div class="recruit-text">
+      <div class="section-label">RECRUIT</div>
+      <h2>採用情報</h2>
+      <p>未経験からでも、しっかりと技術を身につけられる環境です。</p>
+      <p>月給270,000円～50,000円</p>
+      <p>※年齢、経験、資格により優遇します。</p>
+      <p></p>
+      <p>＜年収モデル＞</p>
+      <p>400万円以上（入社2年目/未経験入社）</p>
+      <p>500万円以上（入社5年目/未経験入社）</p>
+      <p>※年収700万以上を目指せる環境です♪</p>
+      <br><a class="btn btn-blue" href="#contact">採用情報を見る　→</a>
+    </div>
+  </div>
+</section>
+
+<section id="company">
+  <div class="container news-company">
+    <div>
+      <div class="section-label">NEWS</div>
+      <h2 class="section-title">お知らせ</h2>
+      <div class="list">
+      　  <div class="list-row"><span>2026.10.01</span><span>ホームページを公開しました</span></div>
+        <div class="list-row"><span>2026.09.01</span><span>採用情報を更新しました</span></div>
+        <div class="list-row"><span>2026.08.01</span><span>施工実績を追加しました</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">COMPANY</div>
+      <h2 class="section-title">会社概要</h2>
+      <div class="company-table">
+        <div class="company-row"><strong>会社名</strong><span>株式会社西部電業</span></div>
+        <div class="company-row"><strong>所在地</strong><span>愛知県春日井市柏原町５丁目９５番地</span></div>
+        <div class="company-row"><strong>事業内容</strong><span>電気設備工事・新築マンション電気工事・現場管理</span></div>
+        <div class="company-row"><strong>対応エリア</strong><span>愛知県を中心としたエリア</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="contact-box"style="text-align:center;">
+  <small>LINEでのお問い合わせ</small>
+  <strong>西部電業 公式LINE</strong>
+  <img src="line-qr.png.png" alt="西部電業 公式LINEのQRコード" style="width:140px; margin:12px auto;">
+  <p style="font-size:12px;">スマートフォンで読み取って友だち追加</p>
+</div>
+    <div class="contact-buttons" style="justify-content:center; width:100%;"></div>
+      
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="logo"><span class="logo-mark">⚡</span><span>株式会社西部電業<small>NISHIBE DENGYO</small></span></div>
+    <div class="footer-nav">
+      <a href="#home">ホーム</a><a href="#about">会社について</a><a href="#service">事業内容</a><a href="#works">施工実績</a><a href="#recruit">採用情報</a><a href="#company">会社概要</a><a href="#contact">お問い合わせ</a>
+    </div>
+    <div class="copyright">© 株式会社西部電業 All Rights Reserved.</div>
+  </div>
+</footer>
+</body>
+</html>
